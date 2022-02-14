@@ -28,9 +28,11 @@ const inputUah = document.querySelector('#uah'),
 
 inputUah.addEventListener('input', () => {
    const request = new XMLHttpRequest();
-   request.open('GET', '/current.json'); // argument 5 - method, url, async, login, pass.
+   request.open('GET', '/current.json'); // метод запросу argument 5 - method, url, async, login, pass.
    request.setRequestHeader('Content-type', 'application/json; charset=utf-8');
    request.send();
+
+
    // ПОДІЇ
    // request.addEventListener('readystatechange', () => {
    //    if (request.readyState === 4 && request.status === 200) {
@@ -45,7 +47,7 @@ inputUah.addEventListener('input', () => {
       request.addEventListener('load', () => {
          if (request.status === 200) {
             const data = JSON.parse(request.response);
-            inputUsd.value = (+inputUah / data.current.usd).toFixed(2);
+            inputUsd.value = (+inputUah.value * data.current.usd).toFixed(2);
          } else {
             inputUsd.value = 'Щось пішло не так';
          }
