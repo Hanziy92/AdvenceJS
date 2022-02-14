@@ -67,20 +67,20 @@
 
 // PROMISE (ES6)
 
-console.log('get data.....');
+// console.log('get data.....');
 // створити проміс
 // МАй два аргумента RESOLTE - коли все добре;    REJECT - коли щось пішло не так;
-const req = new Promise(function(resolte, reject) {
-   setTimeout(() => {
-      console.log('підготовка даних.....');  
-      const product = {
-         name: 'TV',
-         prise: 2000
-      };  
-   resolte(product); 
+// const req = new Promise(function(resolte, reject) {
+//    setTimeout(() => {
+//       console.log('підготовка даних.....');  
+//       const product = {
+//          name: 'TV',
+//          prise: 2000
+//       };  
+//    resolte(product); 
    
-   }, 2000);
-});
+//    }, 2000);
+// });
 // then приймає аргумент з resolte
 // req.then((product) => {
 //    return new Promise((resolte, reject) => {
@@ -116,20 +116,43 @@ const req = new Promise(function(resolte, reject) {
 
 
 // FINNALY - запустится полюбе
-req.then((product) => {
-   return new Promise((resolte, reject) => {
-      setTimeout(() => {
-         product.ststus = 'order';
-         resolte(product);
-      }, 2000);
+// req.then((product) => {
+//    return new Promise((resolte, reject) => {
+//       setTimeout(() => {
+//          product.ststus = 'order';
+//          resolte(product);
+//       }, 2000);
+//    });
+// }).then(data => {
+//       data.modify = true;
+//       return data;
+// }).then((data) => {
+//       console.log(data);
+// }).catch(() => {
+//       console.error('Error');
+// }).finally(() => {
+//    console.log('fannily');
+// });
+
+
+
+const test = time => {
+   return new Promise(resolte => {
+      setTimeout(() => resolte(), time);
    });
-}).then(data => {
-      data.modify = true;
-      return data;
-}).then((data) => {
-      console.log(data);
-}).catch(() => {
-      console.error('Error');
-}).finally(() => {
-   console.log('fannily');
+};
+
+// test(1000).then(() => console.log('1000 ms'));
+// test(2000).then(() => console.log('2000 ms'));
+
+
+// ALL чекає виконання всіх промісів аж тоді спрацьовує
+Promise.all([test(1000), test(2000)]).then(() => {
+   console.log('All');
 });
+
+// RACE - якщо виконався перший проміс тоді спрацьовує всіх не чекає
+Promise.race([test(1000), test(2000)]).then(() => {
+   console.log('All');
+});
+
