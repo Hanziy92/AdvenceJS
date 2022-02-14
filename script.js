@@ -82,6 +82,40 @@ const req = new Promise(function(resolte, reject) {
    }, 2000);
 });
 // then приймає аргумент з resolte
+// req.then((product) => {
+//    return new Promise((resolte, reject) => {
+//       setTimeout(() => {
+//          product.ststus = 'order';
+//          resolte(product);
+//       }, 2000);
+//    });
+// }).then(data => {
+//       data.modify = true;
+//       return data;
+// }).then((data) => {
+//       console.log(data);
+// });  
+
+// REJECT catch - коли щось не получилось
+
+// req.then((product) => {
+//    return new Promise((resolte, reject) => {
+//       setTimeout(() => {
+//          product.ststus = 'order';
+//          reject();
+//       }, 2000);
+//    });
+// }).then(data => {
+//       data.modify = true;
+//       return data;
+// }).then((data) => {
+//       console.log(data);
+// }).catch(() => {
+//    console.error('Error');
+// });
+
+
+// FINNALY - запустится полюбе
 req.then((product) => {
    return new Promise((resolte, reject) => {
       setTimeout(() => {
@@ -94,6 +128,8 @@ req.then((product) => {
       return data;
 }).then((data) => {
       console.log(data);
-});  
-
-
+}).catch(() => {
+      console.error('Error');
+}).finally(() => {
+   console.log('fannily');
+});
