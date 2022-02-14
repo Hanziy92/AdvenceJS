@@ -23,14 +23,14 @@
 
 
 // AJAX 
-const inputUah = document.querySelector('#uah'),
-      inputUsd = document.querySelector('#usd');
+// const inputUah = document.querySelector('#uah'),
+//       inputUsd = document.querySelector('#usd');
 
-inputUah.addEventListener('input', () => {
-   const request = new XMLHttpRequest();
-   request.open('GET', '/current.json'); // метод запросу argument 5 - method, url, async, login, pass.
-   request.setRequestHeader('Content-type', 'application/json; charset=utf-8');
-   request.send();
+// inputUah.addEventListener('input', () => {
+//    const request = new XMLHttpRequest();
+//    request.open('GET', '/current.json'); // метод запросу argument 5 - method, url, async, login, pass.
+//    request.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+//    request.send();
 
 
    // ПОДІЇ
@@ -44,15 +44,15 @@ inputUah.addEventListener('input', () => {
    //    }
 
 
-      request.addEventListener('load', () => {
-         if (request.status === 200) {
-            const data = JSON.parse(request.response);
-            inputUsd.value = (+inputUah.value * data.current.usd).toFixed(2);
-         } else {
-            inputUsd.value = 'Щось пішло не так';
-         }
+   //    request.addEventListener('load', () => {
+   //       if (request.status === 200) {
+   //          const data = JSON.parse(request.response);
+   //          inputUsd.value = (+inputUah.value * data.current.usd).toFixed(2);
+   //       } else {
+   //          inputUsd.value = 'Щось пішло не так';
+   //       }
 
-   });
+   // });
    // СВОЙСТВА:
    // status 
    // statusText
@@ -60,5 +60,40 @@ inputUah.addEventListener('input', () => {
    // readyState 
 
    
+// });
+
+
+
+
+// PROMISE (ES6)
+
+console.log('get data.....');
+// створити проміс
+// МАй два аргумента RESOLTE - коли все добре;    REJECT - коли щось пішло не так;
+const req = new Promise(function(resolte, reject) {
+   setTimeout(() => {
+      console.log('підготовка даних.....');  
+      const product = {
+         name: 'TV',
+         prise: 2000
+      };  
+   resolte(product); 
+   
+   }, 2000);
 });
+// then приймає аргумент з resolte
+req.then((product) => {
+   return new Promise((resolte, reject) => {
+      setTimeout(() => {
+         product.ststus = 'order';
+         resolte(product);
+      }, 2000);
+   });
+}).then(data => {
+      data.modify = true;
+      return data;
+}).then((data) => {
+      console.log(data);
+});  
+
 
