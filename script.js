@@ -173,3 +173,74 @@
 //    fetch('https://jsonplaceholder.typicode.com/todos/1')
 //       .then(response => response.json())
 //       .then(json => console.log(json));
+
+
+
+
+
+
+
+
+
+// МЕТОДИ ПЕРЕБОРА МАСИВА
+
+// filter 
+// const names = ['Petro', 'Ann', 'Kristina', 'Jonh'];
+
+// const shortNames = names.filter((name) => {
+//    return name.length < 5;
+// });
+
+// console.log(shortNames);
+
+
+// map
+// const answers = ['PeTro', 'AnnA', 'Hello'];
+// const result = answers.map(item => item.toLowerCase());
+// console.log(result);
+
+
+// так краще не робити
+// let answers = ['PeTro', 'AnnA', 'Hello'];
+// answers = answers.map(item => item.toLowerCase());
+// console.log(answers);
+
+
+// every/some - return bool
+
+// const some = [4, 'qwer', 'asdfasdf'];
+// [хоть один  елемент співпадає return true]
+// console.log(some.some(item => typeof(item) === 'number'));
+
+// [Всі мають бути однаковими return true]
+
+
+// reduce - збирає масив в одне ціле 
+
+// const arr = [2, 4, 6, 1, 3, 5];
+// Перший аргумент це сумв всіх, другий це дані масиву
+// const result = arr.reduce((sum, current) => sum + current);
+// console.log(result);
+
+
+// const arr = ['apple', 'pear', 'plum'];
+// const result = arr.reduce((sum, current) => `${sum}, ${current}`);
+// console.log(result);
+
+// const arr = [2, 4, 6, 1, 3, 5];
+// третій аргумент початкове значення яке додасться в першй аргумент
+// const result = arr.reduce((sum, current) => sum + current, 3);
+// console.log(result);
+
+// const obj = {
+//    petro: 'persone',
+//    lilay: 'persone',
+//    dog: 'animal',
+//    cat: 'animal'
+// };
+
+// const newArr = Object.entries(obj)
+// .filter(item => item[1] === 'persone')
+// .map(item => item[0]);
+
+// console.log(newArr);
