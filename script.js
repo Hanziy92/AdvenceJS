@@ -10,7 +10,6 @@
 //    parents: {
 //       mom: 'Olga',
 //       dad: 'Mike'
-
 //    }
 // };
 
@@ -19,7 +18,6 @@
 
 // console.log(persone);
 // console.log(clone);
-
 
 
 // AJAX 
@@ -61,7 +59,6 @@
 
    
 // });
-
 
 
 
@@ -135,24 +132,44 @@
 // });
 
 
-
-const test = time => {
-   return new Promise(resolte => {
-      setTimeout(() => resolte(), time);
-   });
-};
+// const test = time => {
+//    return new Promise(resolte => {
+//       setTimeout(() => resolte(), time);
+//    });
+// };
 
 // test(1000).then(() => console.log('1000 ms'));
 // test(2000).then(() => console.log('2000 ms'));
 
 
 // ALL чекає виконання всіх промісів аж тоді спрацьовує
-Promise.all([test(1000), test(2000)]).then(() => {
-   console.log('All');
-});
+// Promise.all([test(1000), test(2000)]).then(() => {
+//    console.log('All');
+// });
 
-// RACE - якщо виконався перший проміс тоді спрацьовує всіх не чекає
-Promise.race([test(1000), test(2000)]).then(() => {
-   console.log('All');
-});
+// // RACE - якщо виконався перший проміс тоді спрацьовує всіх не чекає
+// Promise.race([test(1000), test(2000)]).then(() => {
+//    console.log('All');
+// });
 
+
+
+
+
+
+// API Fetch
+
+
+// fetch('https://jsonplaceholder.typicode.com/posts', {
+//       method: "POST",
+//       body: JSON.stringify({name:' Alex'}),
+//       headers: {
+//          'Content-type': 'application/json'
+//       }
+//    })
+//    .then(response => response.json())
+//    .then(json => console.log(json));
+
+//    fetch('https://jsonplaceholder.typicode.com/todos/1')
+//       .then(response => response.json())
+//       .then(json => console.log(json));
