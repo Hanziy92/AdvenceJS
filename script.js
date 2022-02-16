@@ -244,3 +244,9 @@
 // .map(item => item[0]);
 
 // console.log(newArr);
+
+
+
+// fetch('http://localhost:3000/text')
+// .then(data => data.json())
+// .then(res => console.log(res));
