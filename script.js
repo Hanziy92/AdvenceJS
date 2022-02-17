@@ -31,7 +31,7 @@
 //    request.send();
 
 
-   // ПОДІЇ
+   // ПОДІЇ  REST
    // request.addEventListener('readystatechange', () => {
    //    if (request.readyState === 4 && request.status === 200) {
    //       console.log(request.response);
@@ -247,6 +247,58 @@
 
 
 
+
+
 // fetch('http://localhost:3000/text')
 // .then(data => data.json())
 // .then(res => console.log(res));
+
+
+
+/// LOCAL STORAGE
+
+// localStorage.setItem('number', '5'); // add db
+
+// localStorage.removeItem('number'); 
+
+// localStorage.clear(); // clear db all
+
+// console.log(localStorage.getItem('number')); // get out of db
+
+// const checkbox = document.querySelector('#checkbox'),
+//       form = document.querySelector('form'),
+//       change = document.querySelector('#color');
+
+
+// if (localStorage.getItem('isChecked')) {
+//    checkbox.checked = true;
+// }
+
+// if (localStorage.getItem('bg') === 'changed') {
+//    form.style.backgroundColor = 'red';
+// }
+
+// checkbox.addEventListener('change', () => {
+//    localStorage.setItem('isChecked', true);
+// });
+
+// change.addEventListener('click', () => {
+//    if (localStorage.getItem('bg') === 'changed') {
+//       localStorage.removeItem('bg');
+//       form.style.backgroundColor = '#fff';
+//    } else {
+//       localStorage.setItem('bg', 'changed');
+//       form.style.backgroundColor = 'red';
+//    }
+// });
+
+// const persone = {
+//    name: 'Alex',
+//    age: 25
+// };
+
+// const serializedPersone = JSON.stringify(persone);
+
+// localStorage.setItem('Alex', serializedPersone);
+
+// console.log(JSON.parse(localStorage.getItem('Alex')));
