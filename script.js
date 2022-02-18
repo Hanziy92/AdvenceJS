@@ -302,3 +302,75 @@
 // localStorage.setItem('Alex', serializedPersone);
 
 // console.log(JSON.parse(localStorage.getItem('Alex')));
+
+
+
+
+
+
+
+
+
+// РЕГУЛЯРНІ ВИРАЗИ (ддя роботи з рядками)
+
+
+// new RegExp('pattern', 'flags');
+// /pattern/f
+
+// const ans = prompt('введіть ваше імя');
+// const reg = /n/ig;
+
+
+
+// flags
+// i - находить незалежно від регістра
+// g - найти багато входжень
+// m - багатострочний режим
+
+// Class
+
+// \D - не числа
+// \W - не букви
+
+
+
+
+// \d - шукаєм цифри
+// \w - шукаєм всі букви слова
+// \s - шукаєм пробіли
+
+
+// console.log(ans.search(reg));
+
+
+// return arr
+// console.log(ans.match(reg));
+
+// const pass = prompt('Password');
+
+// replace - має два аргументи 1 -що ми міняєм а другий на що ми міняєм
+// console.log(pass.replace(/\./g, "*")); - рекрамінування \
+// console.log(pass.replace(/./g, "*"));
+
+// console.log('12-34-56'.replace(/-/g, ":"));
+
+// method test return bool
+// const ans = prompt('введіть ваше імя');
+// const reg = /n/ig;
+// console.log(reg.test(ans));
+
+// class
+// const ans = prompt('введіть ваше number');
+// const reg = /\d/g;
+// console.log(ans.match(reg));
+
+// const str = 'My name is R2D2';
+
+// console.log(str.match(/\w\d\w\d/i));
+
+
+// const str = 'My name is R2D2';
+
+// console.log(str.match(/\W/i));
+// console.log(str.match(/\D/ig));
+
