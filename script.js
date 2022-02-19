@@ -433,3 +433,32 @@
 // petro.age = 99;
 // console.log(petro.age);
 // petro.say()
+
+
+
+// МОДУЛІ
+
+const app = '123';
+const number = 1;
+// Анонімна самовикликаюча функція
+(function(){
+   let number = 2;
+   console.log(number);
+   console.log(number + 3);
+}());
+
+console.log(number);
+
+
+//  обєктний інтерфейс
+
+const user = (function(){
+   let privat = function () {
+      console.log('I am privat');
+   };
+   return {
+      sayHello: privat
+   };
+}());
+
+user.sayHello();
