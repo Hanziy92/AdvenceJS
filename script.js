@@ -382,18 +382,54 @@
 
 // SET GET
 
-const persone = {
-   name: "Alex",
-   age: 25,
+// const persone = {
+//    name: "Alex",
+//    age: 25,
 
-   get userAge() {
-      return this.age;
-   },
+//    get userAge() {
+//       return this.age;
+//    },
 
-   set userAge(num) {
-      this.age = num;
-   }
-};
+//    set userAge(num) {
+//       this.age = num;
+//    }
+// };
 
-console.log(persone.userAge = 30);
-console.log(persone.userAge);
+// console.log(persone.userAge = 30);
+// console.log(persone.userAge); 
+
+
+
+
+
+// Encapsulation
+
+// class User {
+//    constructor(name, age) {
+//        this.name = name;
+//        this._age = age;
+//    }
+
+//    #surname = 'Ganzii';
+//    say = () => {
+//        console.log(`Имя пользователя: ${this.name} ${this.#surname}, возраст ${this._age}`);
+//    }
+
+//    get age() {
+//        return this._age;
+//    }
+
+//    set age(age) {
+//        if (typeof age === 'number' && age > 0 && age < 110) {
+//            this._age = age;
+//        } else {
+//            console.log('Error!');
+//        }
+//    }
+// }
+
+// const petro = new User('Petro', 27);
+// console.log(petro.age);
+// petro.age = 99;
+// console.log(petro.age);
+// petro.say()
