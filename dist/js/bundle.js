@@ -528,9 +528,9 @@ var __webpack_exports__ = {};
   \**************************/
 
 
-const myModuls = __webpack_require__(/*! ./main */ "./src/js/main.js");
+const myMaduls = __webpack_require__(/*! ./main */ "./src/js/main.js");
 
-const myModuleIns = new myModuls();
+const myModuleIns = new myMaduls();
 
 myModuleIns.hello();
 myModuleIns.goodbye();
