@@ -468,14 +468,27 @@
 
 
 
-function myModuls() {
-   this.hello = function() {
-      console.log('Hello');
-   };
+// function myModuls() {
+//    this.hello = function() {
+//       console.log('Hello');
+//    };
 
-   this.goodbye = function() {
-      console.log('bye!');
-   };
+//    this.goodbye = function() {
+//       console.log('bye!');
+//    };
+// }
+
+// module.exports = myModuls;
+
+
+export let one = 1;
+
+let two = 2;
+
+export{two};
+
+
+// ЕКСПОРТ ПО замовчуванню тільки один раз 
+export default function sayHi() {
+    console.log('Hello');
 }
-
-module.exports = myModuls;
