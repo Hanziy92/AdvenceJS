@@ -23,5 +23,5 @@
 // console.log(`${data.one} and ${data.two}`);
 // data.sayHi();
 
-import sayHi from './main.js';
-sayHi();
+// import sayHi from './main.js';
+// sayHi();

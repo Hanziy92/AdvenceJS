@@ -481,14 +481,34 @@
 // module.exports = myModuls;
 
 
-export let one = 1;
+// export let one = 1;
 
-let two = 2;
+// let two = 2;
 
-export{two};
+// export{two};
 
 
-// ЕКСПОРТ ПО замовчуванню тільки один раз 
-export default function sayHi() {
-    console.log('Hello');
-}
+// // ЕКСПОРТ ПО замовчуванню тільки один раз 
+// export default function sayHi() {
+//     console.log('Hello');
+// }
+
+
+
+// ПРОВІРКА НА ПОМИЛКИ
+
+
+// try {
+//     console.log('Normal');
+//     console.log(a);
+//     console.log('result');
+    
+// } catch(error) {
+//     console.log(error.name);
+//     console.log(error.message);
+//     console.log(error.stack);
+// } finally {
+
+// }
+
+// console.log('Still normal'
